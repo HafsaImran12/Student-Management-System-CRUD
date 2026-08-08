@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students-Data-Insertion</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Student Registration Form</h1>
+    <div class="form">
+      <label>
+        Name:
+        <input type="text" id="name" />
+      </label>
+      <label>
+        Email:
+        <input type="text" id="email" />
+      </label>
+      <label>
+        Age:
+        <input type="number" id="age" />
+      </label>
+      <label>
+        Course:
+        <input type="text" id="course" />
+      </label>
+      <button id="submit">Submit</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
