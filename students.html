@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All-Students</title>
+    <link rel="stylesheet" href="./bootstrap.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+      integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg" id="navbar">
+      <div class="container-fluid">
+        <img src="./images/graduationCap.png" alt="Logo" class="cap" />
+        <h2 class="d-none d-lg-block m-0 ps-3 text-white">
+          Student Management System
+        </h2>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul
+            class="ms-auto mb-0 list-unstyled fs-5 pe-4 d-flex flex-column flex-lg-row gap-lg-4 gap-2"
+          >
+            <li>
+              <a
+                class="link-opacity-100 text-light text-decoration-none"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-light text-decoration-none p-2 rounded-3 m-lg-0"
+                href="./index.html"
+                id="students"
+                ><i
+                  class="fa-solid fa-plus"
+                  style="color: rgb(255, 255, 255)"
+                ></i>
+                Add New Students</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Body -->
+
+    <div class="student-body">
+      <div class="container-fluid p-3">
+        <div class="card border-0 allStudent-text">
+          <div class="card-body" id="add-member">
+            <h4 class="card-title">
+              <i
+                class="fa-solid fa-user-group"
+                style="color: rgb(99, 44, 255)"
+              ></i>
+              All Students
+            </h4>
+            <div class="card-text">
+              <p class="text-secondary">Here is the list of all students</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="table-responsive">
+            <table class="table align-middle">
+              <thead>
+                <tr class="table-head">
+                  <th style="width: 5%">#</th>
+                  <th style="width: 15%">Name</th>
+                  <th style="width: 5%">Age</th>
+                  <th style="width: 25%">Email</th>
+                  <th style="width: 15%">Course</th>
+                  <th style="width: 20%">City</th>
+                  <th style="width: 15%">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

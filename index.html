@@ -3,31 +3,163 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Students-Data-Insertion</title>
+    <title>Students-Management-System</title>
+    <link rel="stylesheet" href="./bootstrap.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+      integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <h1>Student Registration Form</h1>
-    <div class="form">
-      <label>
-        Name:
-        <input type="text" id="name" />
-      </label>
-      <label>
-        Email:
-        <input type="text" id="email" />
-      </label>
-      <label>
-        Age:
-        <input type="number" id="age" />
-      </label>
-      <label>
-        Course:
-        <input type="text" id="course" />
-      </label>
-      <button id="submit">Submit</button>
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg" id="navbar">
+      <div class="container-fluid">
+        <img src="./images/graduationCap.png" alt="Logo" class="cap" />
+        <h2 class="d-none d-lg-block m-0 ps-3 text-white">
+          Student Management System
+        </h2>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul
+            class="ms-auto mb-0 list-unstyled fs-5 pe-4 d-flex flex-column flex-lg-row gap-lg-4 gap-2"
+          >
+            <li>
+              <a
+                class="link-opacity-100 text-light text-decoration-none"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-light text-decoration-none p-2 rounded-3 m-lg-0"
+                href="./students.html"
+                id="students"
+                ><i
+                  class="fa-solid fa-user-plus"
+                  style="color: rgb(255, 255, 255)"
+                ></i>
+                View Students</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Body -->
+
+    <div class="container d-flex justify-content-center pt-5">
+      <div
+        class="card h-auto form border-card w-100 w-md-50 h-auto form border-0"
+      >
+        <div class="card-body">
+          <div class="card border-0">
+            <div class="card-body px-0">
+              <h4 class="card-title fw-bold" id="add-member">
+                <i class="fa-solid fa-user-plus" id="add-member"></i> Add New
+                Student
+              </h4>
+              <p class="card-text text-secondary">
+                Fill in the details below to add yourself
+              </p>
+            </div>
+          </div>
+          <form class="fw-bold fs-5">
+            <div class="row">
+
+              <!-- Name -->
+              <div class="col-md-12 mb-2 mb-md-4">
+                <label for="Input">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+
+              <!-- Age -->
+              <div class="col-md-12 mb-2 mb-md-4">
+                <label for="Input">Age</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="age"
+                  placeholder="Enter your age"
+                  required
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="col-md-12 mb-2 mb-md-4">
+                <label for="Input">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="example@gmail.com"
+                  required
+                />
+              </div>
+
+              <!-- Course -->
+              <div class="col-md-12 mb-2 mb-md-4">
+                <label for="Input">Course</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="course"
+                  placeholder="Enter your course name"
+                  required
+                />
+              </div>
+
+              <!-- City -->
+              <div class="col-md-12 mb-2 mb-md-4">
+                <label for="Input">City</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="city"
+                  placeholder="Enter your city name"
+                  required
+                />
+              </div>
+
+              <!-- Button -->
+              <div class="text-end pt-3" >
+                <button
+                  type="submit"
+                  id="submit"
+                  class="btn text-light px-3 py-2"
+                >
+                  Add Student
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
+    <script src="./bootstrap.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./app.js"></script>
