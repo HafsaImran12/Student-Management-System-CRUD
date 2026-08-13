@@ -130,21 +130,10 @@ if (window.location.pathname == "/students.html") {
           .eq("id", id);
 
         Swal.fire({
-          title: "Are you sure?",
-          text: "Are you sure to delete this student?",
-          icon: "warning",
-          showCancelButton: true,
-          confirmButtonColor: "#3085d6",
-          cancelButtonColor: "#d33",
-          confirmButtonText: "Yes, delete it!",
-        }).then((result) => {
-          if (result.isConfirmed)
-            Swal.fire({
-              title: "Deleted!",
-              text: "Your file has been deleted.",
-              icon: "success",
-            });
-        });
+  title: "Deleted Successfully!",
+  icon: "success",
+  draggable: true
+});
 
         getAllStudents();
       };
