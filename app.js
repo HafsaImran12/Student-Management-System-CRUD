@@ -130,10 +130,10 @@ if (window.location.pathname == "/students.html") {
           .eq("id", id);
 
         Swal.fire({
-  title: "Deleted Successfully!",
-  icon: "success",
-  draggable: true
-});
+          title: "Deleted Successfully!",
+          icon: "success",
+          draggable: true,
+        });
 
         getAllStudents();
       };
