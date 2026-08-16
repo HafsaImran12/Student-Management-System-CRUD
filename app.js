@@ -55,7 +55,7 @@ submitBtn &&
   });
 
 // students list
-if (window.location.pathname == "/students.html") {
+if (window.location.pathname.includes("/students.html")) {
   const getAllStudents = async () => {
     try {
       tableBody.innerHTML = "";
